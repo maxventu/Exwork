@@ -28,9 +28,9 @@ namespace Exwork
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "503731279761913",
+               appSecret: "9627321ae7af95cc3933e8a437688189");
 
             //app.UseGoogleAuthentication();
         }

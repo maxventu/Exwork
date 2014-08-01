@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
+using Owin.Security.Providers.GitHub;
 using Owin;
 
 namespace Exwork
@@ -32,6 +33,10 @@ namespace Exwork
                appId: "503731279761913",
                appSecret: "9627321ae7af95cc3933e8a437688189");
 
+            app.UseGitHubAuthentication("e13ee8a8b8051eed1208", "fcf52aef7436390a4dab2d94b07eb9758321b06d");
+
+            app.UseOAuthAuthorizationServer(
+                new Microsoft.Owin.Security.OAuth.OAuthAuthorizationServerOptions());
             //app.UseGoogleAuthentication();
         }
     }

@@ -25,6 +25,7 @@
                     id = "logoutForm", @*@class = "right"*@ }))
                 {
                     <ul class="off-canvas-list">
+                        @Html.AntiForgeryToken()
                         <li>
                             <label class="first">NAVIGATION</label>
                         </li>
@@ -81,5 +82,11 @@
     </script>
     @*Use the Scripts section to define page specific scripts*@
     @RenderSection("scripts", required: false)
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Kalenik Maxim &amp; Dmitryi Zheltko</p>
+        </footer>
+    </div>
 </body>
 </html>
